@@ -1,0 +1,20 @@
+import React, { Component } from 'react';
+import Event from './Event'
+
+class EventList extends Component {
+  render() {
+    const { events } = this.props;
+    return (
+      <ul 
+      class="eventList">
+          {events.map(event => 
+            <li 
+            key={event.id}>
+            <Event eventData={event} />
+            </li>
+            )}
+      </ul>
+    );
+  }
+}
+export default EventList;
