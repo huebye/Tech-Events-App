@@ -1,38 +1,180 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:500);
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 .App {
+  display: block;
+  text-align: center;
+  padding: 2% 5%;
+  min-height: 100vH;
+  height: auto;
+  width: auto;
+  background: grey;
+  background-size: 100%;
+  font-family: 'Bebas Neue';
+}
+
+.App * {
+  box-sizing: border-box;
+}
+
+.navbar {
+  font-size: 28px;
+  color:tomato;
+  width: 100%;
+}
+
+.event > h1 {
+  font-size: 30px;
+}
+
+.event > h2 {
+  font-size: 15px;
+  font-weight: lighter;
+  padding: 0;
+  margin: 0 ;
+}
+
+.event > h3 {
+  font-size: 24px;
+}
+
+
+input[type="text"],
+input[type="number"] {
+  padding: 8px 6px 8px 10px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  line-height: 20px;
+  align-self: center;
+  height: 38px;
+}
+
+.city {
+  width: 250px;
+}
+
+.citySearch {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 300px;
+  max-width: 300px;
+  margin: auto;
+  position: relative;
+}
+
+.citySearch_label {
+  font-size: 20px;
+}
+
+.suggestions {
+  width: 250px;
+  z-index: 2;
+  align-self: center;
+  margin: 0 auto;
+  top: 43px;
+  font-size: 14px;
+  box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
+}
+
+.suggestions > li {
+  text-align: left;
+  padding: 8px 6px 8px 10px;
+  background-color: #ffeb9c;
+  cursor: default;
+}
+
+.suggestions > li:last-child {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.suggestions > li:hover {
+  background-color: white;
+}
+
+.eventList {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.event {
+  grid-column: auto;
+  background-color: rgba(224, 234, 235, 0.3);
+  padding: 10px 10px 35px;
+  margin: 0 auto;
+  width: 350px;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 4px;
+  position: relative;
+  transition-duration: 1s;
+}
+
+.event:hover {
+  transform: scale(1.05);
+  transition-duration: 1s;
+}
+
+.eventLocation {
+  color: rgba(229, 229, 229, 0.7);
+  font-size: 16px;
+}
+
+.eventSummary {
+  font-stretch: expanded;
+}
+
+.eventDescription {
+  font-size: 17px;
+  font-weight: 500;
+  padding: 30px;
+  overflow-x: hidden;
+}
+ul {
+  list-style-type: none;
+}
+
+ul > li {
+  list-style-type: none;
+}
+.eventtime {
+  font-size: 15px;
+  font-weight: 550;
+}
+
+.details-btn,.hideDetailsButton {
+  background-color: rgba(229, 229, 229, 0.9);
+  color: #FF6341;
+  padding: 5px 8px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.numberOfEvents {
+  width: 200px;
+  margin: 20px auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.numberOfEventInput {
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+
+@media only screen and (max-width: 692px) {
+  .eventList {
+    grid-template-columns: 1fr;
+  }
+  .App {
+    background-size: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

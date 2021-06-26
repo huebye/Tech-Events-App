@@ -43,9 +43,9 @@ describe('<NumberOfEvents /> component', () => {
 
     test('return no errormessage when numberOfEvents is between 1-32', () =>{
         NumberWrapper.setState({
-            numberOfEvents: ''
+            numberOfEvents: '32'
         });
-        const eventObject = { target: { value: '32' }};
+        const eventObject = { target: { value: 32 }};
         NumberWrapper.find('.numberOfEventInput').simulate('change', eventObject)
         expect(NumberWrapper.state('error')).toEqual('')
     });

@@ -18,15 +18,17 @@ class Event extends Component {
     const { eventData } = this.props
     return (
       <div>
-          <div className="eventElement">
+          <div className="event">
               <h1 className="eventSummary">{eventData.summary}</h1>
-              <h2 className="eventLocation">{eventData.location}</h2>
-              <h3 className="eventStatus">{eventData.status}</h3>
+              <h3 className="eventLocation">{eventData.location}</h3>
+              <h4 className="eventtime">Start: {eventData.start.dateTime.substr(0,10)} Time: {eventData.start.dateTime.substr(11,5)} <br />
+               End: {eventData.end.dateTime.substr(0,10)} Time: {eventData.end.dateTime.substr(11,5)}
+               </h4>
               {this.state.showDetails === true && (
-                  <h4 className="eventDescription">{eventData.description}</h4>
+                  <h5 className="eventDescription">{eventData.description}</h5>
               )}
               {this.state.showDetails === false && (
-                  <button className="showDetailsButton" onClick={() => this.handleShowDetails()}>
+                  <button className="details-btn" onClick={() => this.handleShowDetails()}>
                       Show Details
                   </button>
               )}

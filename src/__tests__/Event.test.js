@@ -10,7 +10,7 @@ describe('<Event /> component', () => {
         });
 
         test('render event', () =>{
-            expect(EventWrapper.find('.eventElement')).toHaveLength(1);
+            expect(EventWrapper.find('.event')).toHaveLength(1);
         });
 
         test('render eventSummary', () =>{
@@ -22,14 +22,14 @@ describe('<Event /> component', () => {
         });
 
         test('show details button is rendered', () =>{
-            expect(EventWrapper.find('.showDetailsButton')).toHaveLength(1);
+            expect(EventWrapper.find('.details-btn')).toHaveLength(1);
         });
 
         test('change showDetails state on showDetailsClick', () => {
             EventWrapper.setState({
               showDetails: false,
             });
-            EventWrapper.find('.showDetailsButton').simulate('click');
+            EventWrapper.find('.details-btn').simulate('click');
             expect(EventWrapper.state('showDetails')).toEqual(true);
           });
 
