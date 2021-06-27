@@ -4,11 +4,7 @@
   display: block;
   text-align: center;
   padding: 2% 5%;
-  min-height: 100vH;
-  height: auto;
-  width: auto;
-  background: grey;
-  background-size: 100%;
+  background-color: grey;
   font-family: 'Bebas Neue';
 }
 
@@ -68,20 +64,27 @@ input[type="number"] {
 }
 
 .suggestions {
-  width: 250px;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
   z-index: 2;
   align-self: center;
   margin: 0 auto;
-  top: 43px;
+  position: relative;
+  right: 20px;
   font-size: 14px;
-  box-shadow: 10px 10px 16px -12px rgba(0, 0, 0, 0.75);
 }
 
 .suggestions > li {
+  align-self: center;
+  margin: 0 auto;
   text-align: left;
   padding: 8px 6px 8px 10px;
   background-color: #ffeb9c;
   cursor: default;
+  font-size: 14px;
+  width: 250px;
+  z-index: 2;
 }
 
 .suggestions > li:last-child {
