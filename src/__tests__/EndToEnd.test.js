@@ -66,4 +66,8 @@ describe('show/hide an event details', () => {
         const eventsShown = await page.$('.citySearch .event .suggestions');
         expect(eventsShown).toBeDefined();
       });
+
+    test('User can select a city from the suggested list', async () => {
+    });
+
   });
