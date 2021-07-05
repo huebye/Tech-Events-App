@@ -2,7 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 .App {
   display: block;
+  height: 100%;
   text-align: center;
+  margin: 0 auto;
   padding: 2% 5%;
   background-color: grey;
   font-family: 'Bebas Neue';
@@ -70,8 +72,9 @@ input[type="number"] {
   z-index: 2;
   align-self: center;
   margin: 0 auto;
-  position: relative;
-  right: 20px;
+  position: absolute;
+  right: 25px;
+  top: 70px;
   font-size: 14px;
 }
 
@@ -109,6 +112,7 @@ input[type="number"] {
   padding: 10px 10px 35px;
   margin: 0 auto;
   width: 350px;
+  min-height: 300px;
   margin-bottom: 10px;
   text-align: center;
   border-radius: 4px;
