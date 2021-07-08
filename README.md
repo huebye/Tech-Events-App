@@ -1,6 +1,6 @@
 # Tech Event App
  
- Test-driven development of an events app using the google calendar api.
+ Test-driven development of an events app using the google calendar api and AWS serverless functions.
  
 ## Features
 
