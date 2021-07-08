@@ -7,6 +7,10 @@ import { getEvents, extractLocations, checkToken, getAccessToken } from './api';
 import './nprogress.css';
 import { WarningAlert } from './Alert';
 import WelcomeScreen from './WelcomeScreen';
+import {
+  ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer
+} from 'recharts';
+import EventGenre from './EventGenre'
 
 
 class App extends Component {
@@ -15,8 +19,8 @@ class App extends Component {
     events: [], //fetched in getEvents() in api.js
     locations: [],
     NumberOfEvents: 32, //max number of events that can be displayed
-    currentCity: 'all', // display all cities and events.
-    warningText: null,
+    currentCity: 'all', // display all cities and events
+    warningText: null, //warns about online, offlne status
     showWelcomeScreen: undefined
   }
 
@@ -72,6 +76,16 @@ class App extends Component {
     this.updateEvents(currentCity, numberOfEvents);
   };
 
+  getData = () => {
+    const {locations, events} = this.state;
+    const data = locations.map((location)=>{
+      const number = events.filter((event) => event.location === location).length
+      const city = location.split(', ').shift()
+      return {city, number};
+    })
+    return data;
+  };
+
 
   componentWillUnmount(){
     this.mounted = false;
@@ -87,6 +101,28 @@ className="App" />
         <WarningAlert text={this.state.warningText} />
         <CitySearch numberOfEvents={this.state.NumberOfEvents} locations={this.state.locations} updateEvents={this.updateEvents} />
         <NumberOfEvents updateNumberOfEvents={this.updateNumberOfEvents}/>
+         <div className="data-vis-wrapper">
+        <h3>Events in each city</h3>
+        <ResponsiveContainer className="chart" height={400} >
+          <ScatterChart className="chart" margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
+            <CartesianGrid />
+            <XAxis type="category" dataKey="city" name="city" tick={{ fill: 'black' }}/>
+            <YAxis
+              allowDecimals={false}
+              type="number"
+              dataKey="number"
+              name="number of events"
+              tick={{ fill: 'black' }}
+            />
+            <Tooltip cursor={{ strokeDasharray: "3 3" }} />
+            <Scatter data={this.getData()} fill="#FF4D00" />
+          </ScatterChart>
+        </ResponsiveContainer>
+         <div className="circle_diagram">
+        <h4>Languages taught in our events</h4>
+        <EventGenre  events={this.state.events} />
+        </div>
+        </div>
         <EventList events={this.state.events} />
         <WelcomeScreen showWelcomeScreen={this.state.showWelcomeScreen}
         getAccessToken={() => { getAccessToken() }} />
@@ -95,4 +131,4 @@ className="App" />
   }
 }
 
-export default App;
+export default App; 

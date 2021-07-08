@@ -11,10 +11,10 @@ full-stack
 developers
 </h3>
 <div className="button_cont" align="center">
-<div class="google-btn">
-<div class="google-icon-wrapper">
+<div className="google-btn">
+<div className="google-icon-wrapper">
 <img
-class="google-icon"
+className="google-icon"
 src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Log
 o.svg"
 alt="Google sign-in"
@@ -22,7 +22,7 @@ alt="Google sign-in"
 </div>
 <button onClick={() => { props.getAccessToken() }}
 rel="nofollow noopener"
-class="btn-text"
+className="btn-text"
 >
 <b>Sign in with google</b>
 </button>
@@ -32,7 +32,7 @@ Page 1
 <a
 href="https://huebye.github.io/meet/privacy.html"
 rel="nofollow noopener"
-class="privacy_link"
+className="privacy_link"
 >
 Privacy policy
 </a>
