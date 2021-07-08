@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Tech-Events-App/static/css/main.6262cf12.chunk.css",
+    "main.css": "/Tech-Events-App/static/css/main.a4fc975e.chunk.css",
     "main.js": "/Tech-Events-App/static/js/main.814a3742.chunk.js",
     "main.js.map": "/Tech-Events-App/static/js/main.814a3742.chunk.js.map",
     "runtime-main.js": "/Tech-Events-App/static/js/runtime-main.8963f136.js",
@@ -12,13 +12,13 @@
     "index.html": "/Tech-Events-App/index.html",
     "service-worker.js": "/Tech-Events-App/service-worker.js",
     "service-worker.js.map": "/Tech-Events-App/service-worker.js.map",
-    "static/css/main.6262cf12.chunk.css.map": "/Tech-Events-App/static/css/main.6262cf12.chunk.css.map",
+    "static/css/main.a4fc975e.chunk.css.map": "/Tech-Events-App/static/css/main.a4fc975e.chunk.css.map",
     "static/js/2.30b0c907.chunk.js.LICENSE.txt": "/Tech-Events-App/static/js/2.30b0c907.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8963f136.js",
     "static/js/2.30b0c907.chunk.js",
-    "static/css/main.6262cf12.chunk.css",
+    "static/css/main.a4fc975e.chunk.css",
     "static/js/main.814a3742.chunk.js"
   ]
 }
