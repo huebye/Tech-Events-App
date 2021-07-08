@@ -179,8 +179,20 @@ ul > li {
 }
 
 .circle_diagram > h4 {
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 25px;
 }
+
+.circle_diagram {
+  display: block;
+  width: 100%;
+  background-color: rgba(229, 229, 229, 0.7);
+  background-size: 100% 100%;
+  padding: 20px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
 
 @media only screen and (max-width: 692px) {
   .eventList {
