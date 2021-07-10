@@ -1,8 +1,8 @@
 {
-  "name": "Tech-Events-App",
+  "name": "meet",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://huebye.github.io/Tech-Events-App",
+  "homepage": "https://huebye.github.io/meet",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
