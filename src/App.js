@@ -120,7 +120,7 @@ className="App" />
         </ResponsiveContainer>
          <div className="circle_diagram">
         <h4>Languages taught in our events</h4>
-        <EventGenre  events={this.state.events} />
+        <EventGenre  events={this.state.events} locations={this.state.locations} />
         </div>
         </div>
         <EventList events={this.state.events} />
